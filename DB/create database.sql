@@ -9,7 +9,7 @@ PRIMARY KEY (ID)
 );
 
 CREATE TABLE Mascotas (
-    ID int NOT NULL,
+    ID int IDENTITY(1,1),  
     Nombre nvarchar(50) NOT NULL,
     FechaNacimiento DateTime,
 	Observaciones nvarchar(255) NULL,
@@ -23,4 +23,4 @@ CREATE TABLE Mascotas (
 
 ALTER TABLE Mascotas
 ADD CONSTRAINT FK_MascotasTipo
-FOREIGN KEY (ID) REFERENCES Tipos(ID);
+FOREIGN KEY (IDTipo) REFERENCES Tipos(ID);

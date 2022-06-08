@@ -62,8 +62,8 @@ namespace MascotasWebApp.Models
         cmd.Parameters.AddWithValue("@Nombre", mascota.Nombre);
         cmd.Parameters.AddWithValue("@FechaNacimiento", mascota.FechaNacimiento);
         cmd.Parameters.AddWithValue("@Observacines", mascota.Observaciones);
-        cmd.Parameters.AddWithValue("@SoporteEmocional", mascota.SoporteEmocional);
-        cmd.Parameters.AddWithValue("@Lazarillo", mascota.Lazarillo);
+        cmd.Parameters.AddWithValue("@SoporteEmocional", mascota.SoporteEmocional? 1:0);
+        cmd.Parameters.AddWithValue("@Lazarillo", mascota.Lazarillo ? 1 : 0);
         cmd.Parameters.AddWithValue("@IDTipo", mascota.IDTipo);
 
         try

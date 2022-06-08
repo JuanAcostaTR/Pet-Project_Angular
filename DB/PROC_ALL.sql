@@ -7,8 +7,9 @@ select a.ID,
 Nombre,
 FechaNacimiento,
 Observaciones,
-SoporteEmocional,
-Lazarillo,
+CASE WHEN SoporteEmocional = 1 THEN 'true' ELSE 'false' end as SoporteEmocional,
+CASE WHEN Lazarillo = 1 THEN 'true' ELSE 'false' end as Lazarillo,
+CASE WHEN Activo = 1 THEN 'true' ELSE 'false' end as Activo,
 t.ID,
 t.Tipo
 from Mascotas as a

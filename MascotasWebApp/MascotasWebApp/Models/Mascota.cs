@@ -15,8 +15,6 @@ namespace MascotasWebApp.Models
             Lazarillo = lazarillo;
             Activo = activo;
             IDTipo = idTipo;
-
-
         }
 
         public Mascota(string nombre, DateTime fechaNacimiento, string observaciones, bool soporteEmocional, bool lazarillo, bool activo, int idTipo)

@@ -32,10 +32,10 @@ namespace MascotasWebApp.Models
           string observaciones = dr.GetString(3).Trim();
           bool soporteEmocional = dr.GetString(4) == "true" ? true : false;
           bool lazarillo = dr.GetString(5) == "true" ? true : false;
-          bool activo = dr.GetString(6) == "true" ? true : false;
+          bool activo = dr.GetBoolean(6);
           int idTipo = dr.GetInt32(7);
 
-          Mascota mascota = new Mascota(id, nombre, fechaNacimiento, observaciones, soporteEmocional, lazarillo, activo, 1);
+          Mascota mascota = new Mascota(id, nombre, fechaNacimiento, observaciones, soporteEmocional, lazarillo, activo, idTipo);
 
           lista.Add(mascota);
         }
